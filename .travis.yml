@@ -1,3 +1,14 @@
 language: java
 jdk:
   - oraclejdk8
+env:
+  global:
+    - "FTP_USER=dosjung"
+    - "FTP_PASSWORD=Jgriffin1367!"
+    - "WAR_FILE_NAME=SpringMVCHibernate"
+    - "WAR_FILE_PATH=./build/libs/"
+afer_success:
+  "curl --ftp-create-dirs -T $WAR_FILE_PATH$WAR_FILE_NAME -u $FTP_USER:$FTP_PASSWORD ftp://52.79.87.80"
+install: true
+script:
+  - ./gradlew build
