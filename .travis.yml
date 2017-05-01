@@ -23,7 +23,12 @@ deploy:
   access_key_id: "AKIAJKQCSR3QMBBOGW5Q"
   secret_access_key: "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"
   bucket: "s3.freesiads.com"
+  file_glob: true
   file: "./build/libs/*"
+    on:
+      tags: true
+      all_branches: true
   skip_cleanup: true
   local_dir: build
   region: 'ap-northeast-2'
+  
