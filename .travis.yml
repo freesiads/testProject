@@ -25,4 +25,4 @@ deploy:
   bucket: "s3.freesiads.com"
   skip_cleanup: true
   local_dir: build
-  region: 'ap-northeast-2a'
+  region: 'us-east-1'
