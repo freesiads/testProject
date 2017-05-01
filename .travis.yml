@@ -14,6 +14,6 @@ env:
 install: true
 script:
   - ./gradlew build
-afer_success:
+after_success:
   - "curl --ftp-create-dirs -T $WAR_FILE_PATH$WAR_FILE_NAME -u $FTP_USER:$FTP_PASSWORD ftp://52.79.87.80"
   - "curl --ftp-create-dirs -T $DEPLOY_FLAG_PATH$DEPLOY_FLAG -u $FTP_USER:$FTP_PASSWORD ftp://52.79.87.80"
