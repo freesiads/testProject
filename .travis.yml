@@ -20,8 +20,8 @@ script:
 
 deploy:
   provider: s3
-  access_key_id: "AKIAJN67TSAT5EITJR4A"
-  secret_access_key: "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"
+  access_key_id: "AKIAJKQCSR3QMBBOGW5Q"
+  secret_access_key: "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"
   bucket: "s3.freesiads.com"
   skip_cleanup: true
   local_dir: build
